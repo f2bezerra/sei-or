@@ -1,14 +1,19 @@
 {
-    "name": "web-ext-config-package-json",
-    "version": "0.1.0",
-    "webExt": {
-        "ignoreFiles": [
-            "LICENSE.txt",
-            "README.md",
-            "package.json",
-            "doc/*",
-            "doc"
-        ],
-        "artifactsDir": "./dist"
+  "name": "web-ext-config-package-json",
+  "version": "0.1.0",
+  "webExt": {
+    "ignoreFiles": [
+      "LICENSE.txt",
+      "README.md",
+      "package.json",
+      "doc/*",
+      "doc"
+    ],
+    "artifactsDir": "./dist"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "sei-or.f2bezerra@gmail.com"
     }
+  }
 }

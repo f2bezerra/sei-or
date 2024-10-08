@@ -1,1 +1,3 @@
 doc/screenshots/*
+dist/*
+.gitignore

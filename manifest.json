@@ -58,5 +58,10 @@
 				"config/*"
 			]
 		}
-	]
+	],
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "sei-or.f2bezerra@gmail.com"
+		}
+	}
 }
