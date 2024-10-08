@@ -1,0 +1,3 @@
+[submodule "util/jslib"]
+	path = util/jslib
+	url = https://github.com/f2bezerra/jslib.git

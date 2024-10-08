@@ -1,0 +1,62 @@
+{
+	"manifest_version": 3,
+	"name": "sei-or",
+	"version": "0.1.0",
+	"author": "Fabio Fernandes Bezerra",
+	"description": "Funcionalidades Extras para o SEI do setor de Outorgas da Anatel",
+	"icons": {
+		"48": "images/logo@48.png",
+		"64": "images/logo@64.png"
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"*://*.anatel.gov.br/sei/controlador*"
+			],
+			"all_frames": true,
+			"css": [
+				"util/jslib/common/animation.css",
+				"util/jslib/common/common.css",
+				"util/sei/sei.css"
+			],
+			"js": [
+				"util/jquery/jquery.min.js",
+				"util/jslib/common/common.js",
+				"scripts/sei-controlador.js",
+				"util/sei/sei.js",
+				"util/sei/PontoControle.js"
+			]
+		},
+		{
+			"matches": [
+				"*://*.anatel.gov.br/sei/controlador.php?acao=procedimento_controlar*"
+			],
+			"js": [
+				"scripts/procedimento-controlar.js"
+			]
+		},
+		{
+			"matches": [
+				"*://*.anatel.gov.br/sei/controlador.php?acao=arvore_visualizar*"
+			],
+			"all_frames": true,
+			"js": [
+				"scripts/procedimento-trabalhar.js"
+			]
+		}
+	],
+	"permissions": [
+		"storage"
+	],
+	"web_accessible_resources": [
+		{
+			"matches": [
+				"*://*/*"
+			],
+			"resources": [
+				"images/*",
+				"config/*"
+			]
+		}
+	]
+}

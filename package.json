@@ -1,0 +1,14 @@
+{
+    "name": "web-ext-config-package-json",
+    "version": "0.1.0",
+    "webExt": {
+        "ignoreFiles": [
+            "LICENSE.txt",
+            "README.md",
+            "package.json",
+            "doc/*",
+            "doc"
+        ],
+        "artifactsDir": "./dist"
+    }
+}

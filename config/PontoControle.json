@@ -1,0 +1,342 @@
+{
+    "adm_ag_analise": {
+        "name": "ADM – Aguardando Análise",
+        "value": 362,
+        "resolve": {
+            "to": "adm_em_analise",
+            "desc": "Assumir Análise",
+            "actions": [
+                "atribuir"
+            ]
+        }
+    },
+    "adm_em_analise": {
+        "name": "ADM – Em Análise",
+        "value": 363,
+        "resolve": {
+            "to": "ag_assinatura",
+            "desc": "Finalizar Análise",
+            "actions": [
+                "desatribuir"
+            ]
+        },
+        "reject": {
+            "to": "adm_ag_analise",
+            "desc": "Devolver Análise",
+            "actions": [
+                "desatribuir"
+            ]
+        }
+    },
+    "ag_assinatura": {
+        "value": 366,
+        "name": "Aguardando Assinatura",
+        "resolve": {
+            "desc": "Finalizar"
+        }
+    },
+    "ag_sor": {
+        "name": "Aguardando Providências da SOR",
+        "value": 367,
+        "resolve": {
+            "desc": "Finalizar"
+        }
+    },
+    "coo_ag_analise": {
+        "name": "COO – Aguardando Análise",
+        "value": 361,
+        "resolve": {
+            "to": "ag_assinatura",
+            "desc": "Finalizar",
+            "actions": [
+                "desatribuir"
+            ]
+        }
+    },
+    "est_ag_analise": {
+        "name": "EST – Aguardando Análise",
+        "value": 364,
+        "resolve": {
+            "to": "est_em_analise",
+            "desc": "Assumir Análise",
+            "actions": [
+                "atribuir"
+            ]
+        }
+    },
+    "est_em_analise": {
+        "name": "EST – Em Análise",
+        "value": 365,
+        "resolve": {
+            "to": "ag_assinatura",
+            "desc": "Finalizar Análise",
+            "actions": [
+                "pgd-a",
+                "desatribuir"
+            ]
+        },
+        "reject": {
+            "to": "est_ag_analise",
+            "desc": "Devolver Análise",
+            "actions": [
+                "desatribuir"
+            ]
+        }
+    },
+    "jur_ag_analise": {
+        "name": "JUR – Aguardando Análise",
+        "value": 356,
+        "resolve": {
+            "to": "jur_em_analise",
+            "desc": "Assumir Análise",
+            "actions": [
+                "atribuir"
+            ]
+        }
+    },
+    "jur_em_analise": {
+        "name": "JUR – Em Análise",
+        "value": 357,
+        "resolve": {
+            "to": "jur_ag_avaliacao",
+            "desc": "Finalizar Análise",
+            "actions": [
+                "pgd-a",
+                "desatribuir"
+            ]
+        },
+        "reject": {
+            "to": "jur_ag_analise",
+            "desc": "Devolver Análise",
+            "actions": [
+                "desatribuir"
+            ]
+        }
+    },
+    "jur_ag_avaliacao": {
+        "name": "JUR – Aguardando Avaliação",
+        "value": 358,
+        "resolve": {
+            "to": "jur_em_avaliacao",
+            "desc": "Assumir Avaliação",
+            "actions": [
+                "atribuir"
+            ]
+        }
+    },
+    "jur_em_avaliacao": {
+        "name": "JUR – Em Avaliação",
+        "value": 359,
+        "resolve": {
+            "to": "ag_assinatura",
+            "desc": "Aprovar Análise",
+            "actions": [
+                "pgd-v",
+                "desatribuir"
+            ]
+        },
+        "reject": {
+            "to": "jur_em_correcao",
+            "desc": "Rejeitar Análise",
+            "actions": [
+                "pgd-ra",
+                "reatribuir"
+            ]
+        }
+    },
+    "jur_em_correcao": {
+        "name": "JUR – Em Correção de Análise",
+        "value": 360,
+        "resolve": {
+            "to": "jur_ag_avaliacao",
+            "desc": "Aprovar Reanálise",
+            "actions": [
+                "pgd-a",
+                "reatribuir"
+            ]
+        }
+    },
+    "rad_ag_analise": {
+        "name": "RAD - Aguardando Análise",
+        "value": 350,
+        "resolve": {
+            "to": "rad_em_analise",
+            "desc": "Assumir Análise",
+            "actions": [
+                "atribuir"
+            ]
+        }
+    },
+    "rad_em_analise": {
+        "name": "RAD - Em Análise",
+        "value": 351,
+        "resolve": {
+            "to": "rad_ag_avaliacao",
+            "desc": "Finalizar Análise",
+            "actions": [
+                "pgd-a",
+                "desatribuir"
+            ]
+        },
+        "reject": {
+            "to": "rad_ag_analise",
+            "desc": "Devolver Análise",
+            "actions": [
+                "desatribuir"
+            ]
+        }
+    },
+    "rad_ag_avaliacao": {
+        "name": "RAD - Aguardando Avaliação",
+        "value": 352,
+        "resolve": {
+            "to": "rad_em_avaliacao",
+            "desc": "Assumir Avaliação",
+            "actions": [
+                "atribuir"
+            ]
+        }
+    },
+    "rad_em_avaliacao": {
+        "name": "RAD - Em Avaliação",
+        "value": 353,
+        "resolve": {
+            "to": "ag_assinatura",
+            "desc": "Aprovar Análise",
+            "actions": [
+                "pgd-v",
+                "desatribuir"
+            ]
+        },
+        "reject": {
+            "to": "rad_ag_correcao",
+            "desc": "Rejeitar Análise",
+            "actions": [
+                "pgd-ra",
+                "reatribuir"
+            ]
+        }
+    },
+    "rad_ag_correcao": {
+        "name": "RAD - Aguardando Correção de Análise",
+        "value": 354,
+        "resolve": {
+            "to": "rad_em_correcao",
+            "desc": "Assumir Correção"
+        }
+    },
+    "rad_em_correcao": {
+        "name": "RAD - Em Correção de Análise",
+        "value": 355,
+        "resolve": {
+            "to": "rad_ag_avaliacao",
+            "desc": "Finalizar Correção",
+            "actions": [
+                "pgd-a",
+                "reatribuir"
+            ]
+        }
+    },
+    "rad_analise_gr": {
+        "name": "RAD - Análise GRs",
+        "value": 371,
+        "resolve": {
+            "to": "rad_ag_avaliacao",
+            "desc": "Finalizar Análise",
+            "actions": [
+                "pgd-a",
+                "desatribuir"
+            ]
+        },
+        "reject": {
+            "to": "rad_ag_analise",
+            "desc": "Devolver Análise",
+            "actions": [
+                "desatribuir"
+            ]
+        }
+    },
+    "tec_ag_analise": {
+        "name": "TEC - Aguardando Análise",
+        "value": 344,
+        "resolve": {
+            "to": "tec_em_analise",
+            "desc": "Assumir Análise",
+            "actions": [
+                "atribuir"
+            ]
+        }
+    },
+    "tec_em_analise": {
+        "name": "TEC - Em Análise",
+        "value": 345,
+        "resolve": {
+            "to": "tec_ag_avaliacao",
+            "desc": "Finalizar Análise",
+            "actions": [
+                "pgd-a",
+                "desatribuir"
+            ]
+        },
+        "reject": {
+            "to": "tec_ag_analise",
+            "desc": "Devolver Análise",
+            "actions": [
+                "desatribuir"
+            ]
+        }
+    },
+    "tec_ag_avaliacao": {
+        "name": "TEC - Aguardando Avaliação",
+        "value": 346,
+        "resolve": {
+            "to": "tec_em_avaliacao",
+            "desc": "Assumir Avaliação",
+            "actions": [
+                "atribuir"
+            ]
+        }
+    },
+    "tec_em_avaliacao": {
+        "name": "TEC - Em Avaliação",
+        "value": 347,
+        "resolve": {
+            "to": "ag_assinatura",
+            "desc": "Aprovar Análise",
+            "actions": [
+                "pgd-v",
+                "desatribuir"
+            ]
+        },
+        "reject": {
+            "to": "tec_ag_correcao",
+            "desc": "Rejeitar Análise",
+            "actions": [
+                "pgd-v",
+                "pgd-ra",
+                "reatribuir",
+                "nota"
+            ]
+        }
+    },
+    "tec_ag_correcao": {
+        "name": "TEC - Aguardando Correção de Análise",
+        "value": 348,
+        "resolve": {
+            "to": "tec_em_correcao",
+            "desc": "Assumir Correção"
+        }
+    },
+    "tec_em_correcao": {
+        "name": "TEC - Em Correção de Análise",
+        "value": 349,
+        "resolve": {
+            "to": "tec_ag_avaliacao",
+            "desc": "Finalizar Correção",
+            "actions": [
+                "pgd-a",
+                "reatribuir"
+            ]
+        }
+    }
+}
