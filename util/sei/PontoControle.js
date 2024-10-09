@@ -1,3 +1,9 @@
+/**
+* @file Classe de manipulação dos Pontos de Controle do SEI
+* @author Fábio Fernandes Bezerra
+* @copyright f2bezerra 2024
+* @license MIT
+*/
 
 class PontoControle {
     /** 

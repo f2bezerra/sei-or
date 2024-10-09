@@ -5,10 +5,9 @@
 * @license MIT
 */
 
-// $(async () => {
-(async function fn() {
+(async function init() {
 
-	let docVisualizacao = await waitDocumentReady(document);
+	await waitDocumentReady(document);
 	let docArvore = await waitDocumentReady("#ifrArvore");
 
 	var pontoControle = getPontoControleInfo(docArvore);

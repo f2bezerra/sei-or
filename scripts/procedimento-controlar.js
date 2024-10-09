@@ -11,9 +11,7 @@ var tables = {
 	"Detalhado": localStorage.filterSettingsDetalhado ?? null
 };
 
-
 $(() => {
-	// addCommand("btnNextPC", "extension://images/next-pc.svg", "Avançar Ponto de Controle", null, handleNextPontoControle);
 
 	for (let table in tables) {
 		tables[table] = tables[table] ? JSON.parse(tables[table]) : { reaplicar: false };
@@ -182,7 +180,6 @@ async function unpageTables() {
 			$(caption).text((m = text.match(/\d+\s+registros?/i)) ? m[0] : text);
 		});
 
-		// $('#divComandos a:not([id])').remove();
 		$('#divComandos').remove();
 		$('a[item-id=despaginar]').closest('li').remove();
 
@@ -192,8 +189,6 @@ async function unpageTables() {
 }
 
 async function updateTable(table, unpage) {
-	// console.time(tableId);
-
 	let tblProcessos = document.getElementById("tblProcessos" + table);
 	if (tblProcessos.updated && (!unpage || tblProcessos.unpaged)) return;
 
@@ -210,8 +205,6 @@ async function updateTable(table, unpage) {
 
 	$(`#tblProcessos${table} tbody`).append($rows);
 	tblProcessos.updated = true;
-
-	// console.timeEnd(tableId);
 }
 
 async function filterTable(table, filter, unpage) {

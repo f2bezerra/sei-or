@@ -3,7 +3,7 @@
 	"name": "sei-or",
 	"version": "0.1.0",
 	"author": "Fabio Fernandes Bezerra",
-	"description": "Funcionalidades Extras para o SEI do setor de Outorgas da Anatel",
+	"description": "Funcionalidades Extras para o SEI voltadas para as áreas de Outorga da Anatel",
 	"icons": {
 		"48": "images/logo@48.png",
 		"64": "images/logo@64.png"
@@ -20,9 +20,8 @@
 				"util/sei/sei.css"
 			],
 			"js": [
-				"util/jquery/jquery.min.js",
+				"util/jquery/jquery-3.7.1",
 				"util/jslib/common/common.js",
-				"scripts/sei-controlador.js",
 				"util/sei/sei.js",
 				"util/sei/PontoControle.js"
 			]
@@ -39,7 +38,6 @@
 			"matches": [
 				"*://*.anatel.gov.br/sei/controlador.php?acao=arvore_visualizar*"
 			],
-			"all_frames": true,
 			"js": [
 				"scripts/procedimento-trabalhar.js"
 			]

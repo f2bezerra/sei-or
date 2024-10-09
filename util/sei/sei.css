@@ -1,27 +1,11 @@
-/************************************************/
-/*	Documento CSS								*/
-/*	Autor: Fábio Fernandes Bezerra				*/
-/************************************************/
+/**
+* @file Estilos visuais aplicáveis ao SEI
+* @author Fábio Fernandes Bezerra
+* @copyright f2bezerra 2024
+* @license MIT
+*/
+
 @charset "utf-8";
-
-
-/*** TAGS CONTROLE ***/
-.umi-tag,
-.ppc-tag {
-	color: #ff5722;
-}
-
-.umi-tag::before {
-	content: '\1f4c5' '\a0';
-}
-
-.ppc-tag::before {
-	color: #000;
-	content: '\25b8' '\1f3f4' '\a0';
-}
-
-
-
 
 /*** BOTÃO DE MENU ***/
 
@@ -37,6 +21,7 @@
 	padding: 0;
 	margin: 1px 1px 0 -17px;
 	-webkit-appearance: button;
+	appearance: button;
 	cursor: pointer !important;
 	height: 40px;
 	border: 0;
@@ -196,12 +181,10 @@
 
 .cfor-function-editor span::selection {
 	background: #ffeb3a;
-	/* WebKit/Blink Browsers */
 }
 
 .cfor-function-editor span::-moz-selection {
 	background: #ffeb3a;
-	/* Gecko Browsers */
 }
 
 .temp-field {
